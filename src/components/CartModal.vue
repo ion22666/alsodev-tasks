@@ -17,7 +17,7 @@
                         class="button button-primary"
                         @click="
                             () => {
-                                $router.push({ name: 'thank-for-ordering' });
+                                $router.push({ path: base + '/thank-for-ordering' });
                                 $store.commit('closeCart');
                             }
                         "
@@ -36,12 +36,18 @@
 <script>
 import { computed } from 'vue';
 import { getStore } from '../store';
+import { base } from '@/main';
 
 import FoodRow from '../components/FoodRow.vue';
 
 export default {
     components: {
         FoodRow,
+    },
+    data() {
+        return {
+            base,
+        };
     },
     setup() {
         const store = getStore();

@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <a @click="$router.push({ name: 'home' })" class="logo">
+        <a @click="$router.push({ path: base + '/' })" class="logo">
             <img src="img/icon/logo.svg" alt="Logo" />
         </a>
         <label class="address">
@@ -25,10 +25,14 @@
 </template>
 
 <script>
+import { base } from '@/main';
+
 export default {
-    name: 'AppHeader',
-    props: {
-        msg: String,
+    name: 'AppFooter',
+    data() {
+        return {
+            base,
+        };
     },
 };
 </script>

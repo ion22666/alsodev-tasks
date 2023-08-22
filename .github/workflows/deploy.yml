@@ -28,8 +28,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -60,7 +58,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with node
-        run: ${{ steps.detect-package-manager.outputs.runner }} npm run build
+        run: ${{ steps.detect-package-manager.outputs.runner }} NODE_ENV=production npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

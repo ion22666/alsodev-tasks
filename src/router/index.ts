@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import HomeView from '../views/Home.vue';
-import RestaurantView from '../views/Restaurant.vue';
+import HomeView from '../views/HomeView.vue';
+import RestaurantView from '../views/RestaurantView.vue';
 
 export default createRouter({
     history: createWebHistory(),
@@ -11,7 +11,7 @@ export default createRouter({
             component: HomeView,
         },
         {
-            path: '/about',
+            path: '/restaurant/:name',
             component: RestaurantView,
         },
     ],

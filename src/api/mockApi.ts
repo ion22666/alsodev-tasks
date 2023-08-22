@@ -9,8 +9,11 @@ function mockFetchRequest<T>(data: T) {
 }
 
 export default {
-    getParteners() {
+    listParteners() {
         return mockFetchRequest(db.parteners);
+    },
+    getPartener(name: string) {
+        return mockFetchRequest(db.parteners.find(p => p.name.toLowerCase() === name.toLowerCase()));
     },
     getProducts(partener?: string | string[]) {
         // ignore performance

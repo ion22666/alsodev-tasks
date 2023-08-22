@@ -1,7 +1,6 @@
+# alsodev-tasks
 # You can see the project here
 <a href="https://ion22666.github.io/alsodev-tasks">ion22666.github.io/alsodev-tasks</a>
-
-# alsodev-tasks
 
 ## Project setup
 ```
@@ -18,10 +17,4 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# For part 1 of the task, see src/utils (or you can run `node dist/areConsecutive.js` for example)

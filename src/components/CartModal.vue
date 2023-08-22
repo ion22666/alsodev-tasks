@@ -17,7 +17,7 @@
                         class="button button-primary"
                         @click="
                             () => {
-                                $router.push({ path: base + '/thank-for-ordering' });
+                                $router.push({ path: '/thank-for-ordering' });
                                 $store.commit('closeCart');
                             }
                         "

@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <a @click="$router.push({ path: base + '/' })" class="logo">
+        <a @click="$router.push({ path: '/' })" class="logo">
             <img src="img/icon/logo.svg" alt="Logo" />
         </a>
         <label class="address">

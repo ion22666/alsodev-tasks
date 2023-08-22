@@ -11,7 +11,15 @@
             </div>
             <!-- /.card-info -->
             <div class="card-buttons">
-                <button class="button button-primary button-add-cart">
+                <button
+                    class="button button-primary button-add-cart"
+                    @click="
+                        () => {
+                            $store.commit('addProductToCart', { product: product, count: 1 });
+                            $store.commit('openCart');
+                        }
+                    "
+                >
                     <span class="button-card-text">В корзину</span>
                     <span class="button-cart-svg"></span>
                 </button>

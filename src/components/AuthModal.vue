@@ -1,8 +1,8 @@
 <template>
-    <div @click.self="$store.commit('closeAuth')" class="modal-auth" :style="{ display: isAuthWindowOpen ? 'flex' : 'none' }">
+    <div @click.self="$store.commit('closeAuth')" class="modal-auth" :style="{ display: isAuthModalOpen ? 'flex' : 'none' }">
         <div class="modal-dialog modal-dialog-auth">
             <button class="close-auth" @click="$store.commit('closeAuth')">&times;</button>
-            <form id="logInForm">
+            <form id="logInForm" action="/" method="get">
                 <fieldset class="modal-body">
                     <legend class="modal-title">Авторизация</legend>
                     <label class="label-auth">
@@ -35,7 +35,7 @@ export default {
     setup() {
         const store = getStore();
         return {
-            isAuthWindowOpen: computed(() => store.state.isAuthWindowOpen),
+            isAuthModalOpen: computed(() => store.state.isAuthModalOpen),
         };
     },
 };

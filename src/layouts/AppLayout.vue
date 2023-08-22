@@ -3,19 +3,22 @@
     <main class="main">
         <slot></slot>
     </main>
-    <AuthWindow />
+    <AuthModal />
+    <CartModal />
     <AppFooter></AppFooter>
 </template>
 <script>
 import AppHeader from '../components/Header.vue';
 import AppFooter from '../components/Footer.vue';
-import AuthWindow from '@/components/AuthWindow.vue';
+import AuthModal from '@/components/AuthModal.vue';
+import CartModal from '@/components/CartModal.vue';
 
 export default {
     components: {
         AppHeader,
         AppFooter,
-        AuthWindow,
+        AuthModal,
+        CartModal,
     },
 };
 </script>

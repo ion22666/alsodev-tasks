@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, Router } from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
 import RestaurantView from '../views/RestaurantView.vue';
@@ -19,5 +19,5 @@ export default createRouter({
             path: '/thank-for-ordering',
             component: ThanksForOrderView,
         },
-    ],
+    ].map(e => ({ ...e, path: (process.env.NODE_ENV === 'production' ? '/alsodev-tasks' : '') + e.path })),
 });

@@ -1,7 +1,7 @@
 <template>
     <header class="header">
-        <a class="logo">
-            <img src="img/icon/logo.svg"  @click="$router.push('/')" alt="Logo" />
+        <a @click="$router.push('/')" class="logo">
+            <img src="img/icon/logo.svg" alt="Logo" />
         </a>
         <label class="address">
             <input type="text" class="input input-address" placeholder="Адрес доставки" />
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'AppHeader',
     props: {

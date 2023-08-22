@@ -1,5 +1,5 @@
 <template>
-    <a :href="'/restaurant/' + props.partner.name" class="card card-restaurant">
+    <a @click="$router.push('restaurant/' + props.partner.name)" class="card card-restaurant">
         <img :src="props.partner.image" alt="image" class="card-image" />
         <div class="card-text">
             <div class="card-heading">

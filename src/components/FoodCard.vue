@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img :src="'/' + product.image" alt="image" class="card-image" />
+        <img :src="product.image" alt="image" class="card-image" />
         <div class="card-text">
             <div class="card-heading">
                 <h3 class="card-title card-title-reg">{{ product.name }}</h3>

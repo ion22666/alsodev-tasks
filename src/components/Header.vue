@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <a @click="$router.push('/')" class="logo">
+        <a @click="$router.push({ name: 'home' })" class="logo">
             <img src="img/icon/logo.svg" alt="Logo" />
         </a>
         <label class="address">
@@ -25,7 +25,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'AppHeader',
     props: {

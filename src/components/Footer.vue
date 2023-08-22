@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-block">
-                <img src="img/icon/logo.svg" alt="logo" class="logo footer-logo" @click="$router.push('/')" />
+                <img src="img/icon/logo.svg" alt="logo" class="logo footer-logo" @click="$router.push({ name: 'home' })" />
                 <nav class="footer-nav">
                     <a href="#" class="footer-link">Ресторанам </a>
                     <a href="#" class="footer-link">Курьерам</a>

@@ -157,7 +157,7 @@
                 </div>
                 <!-- /.modal-header -->
                 <div class="modal-body">
-                    <FoodComponent :product="{}"></FoodComponent>
+                    <FoodComponent v-for="product in products" :key="product.id" :product="product" />
                     <div class="food-row">
                         <span class="food-name">Ролл угорь стандарт</span>
                         <strong class="food-price">250 ₽</strong>
@@ -186,7 +186,7 @@
 
 <script lang="ts">
 import FoodComponent from '../components/FoodComponent.vue';
-import api from '../api/mockApi.ts';
+import api from '../api/mockApi';
 
 export default {
     name: 'HomeView',
@@ -202,7 +202,7 @@ export default {
         };
     },
     async onMounted() {
-        this.products = await api.fetchProducts();
+        this.products = await api.getProducts();
     },
 };
 </script>

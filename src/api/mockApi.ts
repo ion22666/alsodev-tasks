@@ -14,7 +14,7 @@ export default {
     },
     getProducts(partener?: string | string[]) {
         // ignore performance
-        mockFetchRequest(
+        return mockFetchRequest(
             db.parteners
                 .filter(p => !partener || (typeof partener === 'string' ? partener === p.name : partener.includes(p.name)))
                 .map(p => p.products)
